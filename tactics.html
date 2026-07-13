@@ -1,1 +1,74 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Tactics & Scenarios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tactical Scenarios</h1>
+        <p>Learn to spot critical patterns and execute the perfect response.</p>
+        <br>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="index.html" class="nav-btn">Openings Library</a>
+            <a href="pieces.html" class="nav-btn">Piece Movements</a>
+            <a href="rules.html" class="nav-btn">Special Rules</a>
+            <a href="tactics.html" class="nav-btn">Tactics Guide</a>
+        </div>
+    </header>
+
+    <section class="openings">
+
+        <div class="opening-card">
+            <h2>The Fork (🍴)</h2>
+            <p class="short">One piece attacks two or more enemy targets at the exact same time.</p>
+            <button onclick="toggleInfo('fork')">How to Respond</button>
+            <div id="fork" class="more-info">
+                <p><strong>The Scenario:</strong> Knights and Pawns are the kings of forks. A knight might land on a square where it simultaneously threatens both your King and your Queen.</p>
+                <p><strong>How to Respond:</strong> 
+                    <br>1. <strong>If your King is in check:</strong> You *must* move the King, meaning you will likely lose the other piece. 
+                    <br>2. <strong>Prevention:</strong> Always look one move ahead before moving your pieces to squares where a knight can easily hop in and fork them.
+                </p>
+            </div>
+        </div>
+
+        <div class="opening-card">
+            <h2>The Pin (📌)</h2>
+            <p class="short">Restricting an enemy piece from moving because doing so would expose a more valuable asset behind it.</p>
+            <button onclick="toggleInfo('pin')">How to Respond</button>
+            <div id="pin" class="more-info">
+                <p><strong>The Scenario:</strong> An enemy Bishop attacks your Knight, and directly behind your Knight sits your precious Queen. If your Knight moves, your Queen dies.</p>
+                <p><strong>How to Respond:</strong> 
+                    <br>1. <strong>Break the Pin:</strong> Place a lower-value piece (like a Bishop) between your pinned piece and the valuable asset behind it.
+                    <br>2. <strong>Attack the Attacker:</strong> Move a pawn up to kick the enemy pinning piece away before they can put more pressure on you.
+                </p>
+            </div>
+        </div>
+
+        <div class="opening-card">
+            <h2>The Skewer (🍢)</h2>
+            <p class="short">The reverse of a pin: a valuable piece is attacked first, forcing it to move and sacrifice a piece behind it.</p>
+            <button onclick="toggleInfo('skewer')">How to Respond</button>
+            <div id="skewer" class="more-info">
+                <p><strong>The Scenario:</strong> An enemy Rook puts your King in check, but right behind your King on the same line sits your unprotected Rook.</p>
+                <p><strong>How to Respond:</strong> 
+                    <br>1. <strong>Get Out of Way with a Threat:</strong> If the valuable front piece can move away *while delivering a check or threatening something equal*, you can disrupt the trap.
+                    <br>2. <strong>Block the Line:</strong> Intercept the attack by sliding a less valuable piece directly into the firing line.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Made with ♟️ passion for chess.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
