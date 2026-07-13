@@ -1,1 +1,64 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Chess Rules</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Special Chess Rules</h1>
+        <p>Master the advanced tactical loopholes and endgame mechanics.</p>
+        <br>
+        <a href="index.html" class="nav-btn">← Back to Openings</a>
+    </header>
+
+    <section class="openings">
+
+        <div class="opening-card">
+            <h2>Castling (♔ ⇄ ♖)</h2>
+            <p class="short">The only move in chess where you can move two pieces at the exact same time to safeguard your King.</p>
+            <button onclick="toggleInfo('castling')">View Conditions</button>
+            <div id="castling" class="more-info">
+                <p><strong>The Move:</strong> The King moves two squares toward a Rook, and that Rook hops over the King to land right next to it.</p>
+                <p><strong>Strict Requirements:</strong> 
+                    <br>1. It must be the King's first move and the Rook's first move.
+                    <br>2. All squares between them must be completely empty.
+                    <br>3. The King cannot currently be in check, and it cannot pass through or land on any square attacked by an enemy piece.
+                </p>
+            </div>
+        </div>
+
+        <div class="opening-card">
+            <h2>En Passant ( Crossed Pawns )</h2>
+            <p class="short">A sneaky, highly misunderstood capturing rule that translates from French to "In Passing."</p>
+            <button onclick="toggleInfo('enpassant')">View Conditions</button>
+            <div id="enpassant" class="more-info">
+                <p><strong>The Move:</strong> If an enemy pawn leaps two squares forward from its starting position and lands directly adjacent to your pawn, you can capture it diagonally behind it as if it had only moved one square.</p>
+                <p><strong>The Catch:</strong> You must execute this capture immediately on your very next turn. If you make any other move, the right to capture <em>En Passant</em> is permanently lost for that pawn.</p>
+            </div>
+        </div>
+
+        <div class="opening-card">
+            <h2>Stalemate ( ½ - ½ )</h2>
+            <p class="short">The ultimate defensive save. Turning a completely lost position into a forced tie game.</p>
+            <button onclick="toggleInfo('stalemate')">View Conditions</button>
+            <div id="stalemate" class="more-info">
+                <p><strong>The Scenario:</strong> It is a player's turn to move, their King is **not** currently in check, but they have absolutely zero legal moves left anywhere on the board.</p>
+                <p><strong>The Result:</strong> The game instantly freezes and ends in a draw. No matter how many extra pieces your opponent has, the score is split evenly.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Made with ♟️ passion for chess.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
