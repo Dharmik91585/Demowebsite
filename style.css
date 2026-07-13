@@ -1,0 +1,166 @@
+/* GLOBAL -------------------------------------------------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: radial-gradient(circle at top, #2b2b45, #1e1e2f 60%);
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0.3px;
+}
+
+/* HERO -------------------------------------------------- */
+header {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #6a5acd, #836fff, #9a7bff);
+    color: white;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.4);
+    border-bottom: 4px solid #ffd700;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+header p {
+    font-size: 1.7rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* SECTION DIVIDER -------------------------------------- */
+.openings::before {
+    content: "♟ Chess Openings Library ♟";
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+/* OPENING GRID ------------------------------------------ */
+.openings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 45px;
+}
+
+/* CARDS -------------------------------------------------- */
+.opening-card {
+    background: linear-gradient(145deg, #ffffff15, #ffffff05);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 45px;
+    width: 380px;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+    border: 2px solid #ffffff25;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chess icon on each card */
+.opening-card::before {
+    content: "♜";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 3.5rem;
+    color: #ffd700;
+    opacity: 0.15;
+    transform: rotate(15deg);
+    pointer-events: none;
+}
+
+.opening-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 14px 45px rgba(0,0,0,0.55);
+}
+
+/* CARD HEADERS ------------------------------------------ */
+.opening-card h2 {
+    margin-top: 0;
+    font-size: 2.4rem;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255,215,0,0.5);
+}
+
+/* SHORT DESCRIPTION -------------------------------------- */
+.opening-card .short {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+/* BUTTONS ------------------------------------------------ */
+button {
+    margin-top: 20px;
+    padding: 16px 22px;
+    background: #ffd700;
+    color: #222;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    align-self: flex-start;
+}
+
+button:hover {
+    background: #ffea4d;
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #ffd700;
+}
+
+/* MORE INFO --------------------------------------------- */
+.more-info {
+    display: none; /* Controlled cleanly by JS class toggle */
+    margin-top: 20px;
+    background: #ffffff20;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    border-left: 4px solid #ffd700;
+}
+
+/* Class to show the layout dynamically */
+.more-info.is-visible {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.more-info p {
+    margin-bottom: 12px;
+}
+
+.more-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* ANIMATION --------------------------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER ------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 50px;
+    background: #111;
+    color: #bbb;
+    font-size: 1.3rem;
+    margin-top: 80px;
+    border-top: 3px solid #ffd700;
+}
