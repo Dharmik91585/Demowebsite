@@ -164,3 +164,22 @@ footer {
     margin-top: 80px;
     border-top: 3px solid #ffd700;
 }
+
+/* NAVIGATION BUTTON LINK */
+.nav-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #ffd700;
+    transition: background 0.3s, transform 0.2s;
+}
+.nav-btn:hover {
+    background: #ffd700;
+    color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px #ffd700;
+}
