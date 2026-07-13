@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Piece Movements</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Chess Piece Guide</h1>
+        <p>Master how each battle asset navigates the board.</p>
+        <br>
+        <a href="index.html" class="nav-btn">← Back to Openings</a>
+    </header>
+
+    <section class="openings">
+
+        <div class="opening-card">
+            <h2>The Pawn (♙)</h2>
+            <p class="short">The foot soldier of chess. Weak individually, but a wall when grouped together.</p>
+            <button onclick="toggleInfo('pawn')">Learn Movement</button>
+            <div id="pawn" class="more-info">
+                <p><strong>Movement:</strong> Moves straight forward 1 square at a time. On its very first move, it can optionally leap forward 2 squares.</p>
+                <p><strong>Capturing:</strong> Captures diagonally forward exactly 1 square.</p>
+                <p><strong>Special Rule:</strong> Can promote into a Queen, Rook, Bishop, or Knight if it reaches the opposite side of the board. Also handles the complex <em>En Passant</em> rule.</p>
+            </div>
+        </div>
+
+        <div class="opening-card">
+            <h2>The Knight (♘)</h2>
+            <p class="short">The battlefield trickster. Excellent at closed positions and jumping defenses.</p>
+            <button onclick="toggleInfo('knight')">Learn Movement</button>
+            <div id="knight" class="more-info">
+                <p><strong>Movement:</strong> Moves in an "L-shape": 2 squares in one direction and then 1 square at a orthogonal angle.</p>
+                <p><strong>Special Trait:</strong> The only piece on the board that can physically jump over other pieces.</p>
+                <p><strong>Pro Tip:</strong> Knights are devastating when placed on "outposts"—squares deep in enemy territory where pawns cannot chase them away.</p>
+            </div>
+        </div>
+
+        <div class="opening-card">
+            <h2>The Bishop (♗)</h2>
+            <p class="short">The long-range sniper. Dominates open diagonals across the entire board.</p>
+            <button onclick="toggleInfo('bishop')">Learn Movement</button>
+            <div id="bishop" class="more-info">
+                <p><strong>Movement:</strong> Moves any number of vacant squares diagonally.</p>
+                <p><strong>Limitation:</strong> Can never leave the color grid it starts on (you have one light-squared bishop and one dark-squared bishop).</p>
+                <p><strong>Pro Tip:</strong> Clearing away pawns to create open pathways makes bishops incredibly terrifying long-range attackers.</p>
+            </div>
+        </div>
+
+        <div class="opening-card">
+            <h2>The Rook (♖)</h2>
+            <p class="short">Heavy artillery. Slow to enter the game, but utterly dominant in late stages.</p>
+            <button onclick="toggleInfo('rook')">Learn Movement</button>
+            <div id="rook" class="more-info">
+                <p><strong>Movement:</strong> Moves any number of vacant squares straight horizontally or vertically.</p>
+                <p><strong>Middlegame Plans:</strong> Control open columns (files) and target the 7th rank to trap the enemy king.</p>
+                <p><strong>Special Rule:</strong> Can coordinate with the King to perform the defensive <em>Castling</em> maneuver.</p>
+            </div>
+        </div>
+
+        <div class="opening-card">
+            <h2>The Queen (♕)</h2>
+            <p class="short">The absolute ultimate weapon. Combines the moves of both a Rook and a Bishop.</p>
+            <button onclick="toggleInfo('queen')">Learn Movement</button>
+            <div id="queen" class="more-info">
+                <p><strong>Movement:</strong> Moves any number of vacant squares straight or diagonally in any direction.</p>
+                <p><strong>Value:</strong> Worth roughly 9 pawns, making it the highest-value fighting asset on the field.</p>
+                <p><strong>Pro Tip:</strong> Avoid bringing your Queen out too early in the opening, or your opponent will chase her around and gain free development time.</p>
+            </div>
+        </div>
+
+        <div class="opening-card">
+            <h2>The King (♔)</h2>
+            <p class="short">The primary target. Low mobility, but the entire match relies on its survival.</p>
+            <button onclick="toggleInfo('king')">Learn Movement</button>
+            <div id="king" class="more-info">
+                <p><strong>Movement:</strong> Moves exactly 1 square in any direction (straight or diagonal).</p>
+                <p><strong>Ultimate Rule:</strong> Can never move onto a square attacked by an enemy piece (into check). If trapped with no escape, it is Checkmate, and the game ends.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Made with ♟️ passion for chess.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
